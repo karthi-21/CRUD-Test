@@ -8,7 +8,7 @@ Following are the methods implemented,
  https://crud-node-express.herokuapp.com/movies  
 2.Get movie with id:  
  getrequest with parameter in query param should be given, url will be similar as below   
- http://crud-node-express.herokuapp.com/movies/?movieId=5f7496ddb7ee152b04c023ab   
+ http://crud-node-express.herokuapp.com/movies/getMovie?movieId=5f7496ddb7ee152b04c023ab   
 3.Post a movie:  
  post request with parameter in request body should be given   
  http://crud-node-express.herokuapp.com/movies   
