@@ -13,8 +13,8 @@ exports.movies = (req, res) => {
 };
 
 exports.getMovie = (req, res) => {
-  const id = mongoose.Types.ObjectId(req.query.movieId);
-  Movie.findById({ id }, (err, movie) => {
+  const id = req.query.movieId;
+  Movie.findById(id, (err, movie) => {
     if (err) {
       res.send(err);
     }
@@ -50,4 +50,19 @@ exports.delete = (req, res) => {
     }
     res.json({ message: "Movie deleted from db" });
   });
+};
+
+exports.initial = (req, res) => {
+  res
+    .status(200)
+    .send({
+      backend: "Working",
+      MongoDB: "Connected",
+      hostedIn: "Heroku",
+      author: "Karthikeyan S",
+      srcCode: "https://github.com/karthi-21/CRUD-Test",
+      authorProfile: "https://github.com/karthi-21",
+      isAutomaticDeploymentEnabled: "true",
+      ForAvailableURLS: "https://github.com/karthi-21/CRUD-Test/blob/master/README.md",
+    });
 };

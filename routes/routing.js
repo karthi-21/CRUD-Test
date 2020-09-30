@@ -12,4 +12,11 @@ module.exports = app => {
     .get(controller.getMovie)
     .put(controller.update)
     .delete(controller.delete);
+
+    app
+    .route("/")
+    .get(controller.initial)
+    .post(controller.initial)
+    .put(controller.initial)
+    .delete(controller.initial);
 };
